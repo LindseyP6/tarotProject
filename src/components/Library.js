@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Library({}) {
+function Library({showCards}) {
   
   return (
-    <div>Library</div>
+    <div>{showCards}</div>
   )
 }
 
-export default Library
+export default Library;

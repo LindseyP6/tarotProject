@@ -2,7 +2,7 @@ import React from 'react'
 
 function Cards({name, image}) {
   return (
-    <div>
+    <div className="reading-cards">
       <h4>{name} </h4>
       <img
         src={image}
