@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Library({cards}) {
+function Library({}) {
   
   return (
     <div>Library</div>

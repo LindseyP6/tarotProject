@@ -1,25 +1,30 @@
-import React, {useEffect, useState} from 'react';
-import Library from './Library';
+import React, {useState} from 'react';
+import MoreButton from "./MoreButton";
 import Cards from './Cards';
 
-
-function CardContainer() {
-  const [cards, setCards] = useState([])
+function CardContainer({cards}) {
   const [index, setIndex] = useState(0)
+  
+  const cardsList = cards
+      .slice(index, index + 3)
+      .map(card => (
+        <Cards 
+        key={card.id} 
+        name={card.name}
+        image={card.image}
+        />
+      ))
 
-  useEffect(()=>{
-    fetch("http://localhost:4000/cards")
-    .then(r=>r.json())
-    .then(setCards => cards.slice(index, index + 4)
-    .map(card=> <Cards key={card.value} name={card.name}/>)
-    )
-  }, [])
+  function handleAddCards(){
+    setIndex(index => (index + 1))
+  }
 
   return (
-    <div>
-      <Library cards={cards} />
-       
-      Container</div>
+    <div className="cards-list">
+       {cardsList}
+       <MoreButton onClickMore = {handleAddCards}/>
+      Container
+      </div>
   )
 }
 

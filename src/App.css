@@ -1,0 +1,16 @@
+* {
+  margin: auto;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(63, 30, 53);
+  color:white;
+}
+
+.cards-list {
+  grid-area: bt;
+  display: flex;
+  justify-content: space-evenly;
+}
