@@ -8,7 +8,7 @@ function App() {
   const [cards, setCards] = useState([])
   
   useEffect(()=>{
-    fetch("http://localhost:4000/cards")
+    fetch("http://localhost:3000/cards")
     .then(r=>r.json())
     .then(setCards)
   }, [])
