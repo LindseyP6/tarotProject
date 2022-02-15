@@ -19,8 +19,8 @@ function Cards({name, image, meaningUp}) {
         alt={name}
         width="70%"
       />
-
       {toggle ? <p>{meaningUp}</p> : null}
+
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
   <div id="nav">
-    <div class="overlay">
+    <div className="overlay">
       <h1>PERSONAL TAROT READINGS</h1>
       <NavLink className="nav-li" to="/readings">Readings</NavLink>
       <NavLink className="nav-li" to="/library">Library</NavLink>
