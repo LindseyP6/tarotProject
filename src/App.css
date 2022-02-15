@@ -49,8 +49,7 @@ button {
   justify-content: space-evenly;
 }
 
-
-img {
+.logo {
   position: absolute;
   border-radius:5px;
     top: 40%;
