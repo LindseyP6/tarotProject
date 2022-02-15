@@ -4,6 +4,7 @@ import CardContainer from './CardContainer';
 import Library from './Library';
 import NavBar from './NavBar';
 import Login from './Login';
+import LibraryDetail from './LibraryDetail';
 import '../App.css';
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
         <Route exact path="/readings">
          <CardContainer cards={cards}/>
         </Route>
+
+        <Route exact path="/library/:id">
+          <LibraryDetail />
+        </Route> 
         <Route exact path="/library">
          <Library cards={cards} />
         </Route>
