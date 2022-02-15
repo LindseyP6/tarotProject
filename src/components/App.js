@@ -9,12 +9,18 @@ import '../App.css';
 
 function App() {
   const [cards, setCards] = useState([])
+  const [searchTerm, setSearchTerm] = useState("")
+  
 
   useEffect(()=>{
     fetch("http://localhost:3000/cards")
     .then(r=>r.json())
     .then(setCards)
   }, [])
+
+  const searchCards = cards.filter((card) => {
+    return card.name && card.desc && card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
   return (
     <div>
@@ -30,7 +36,11 @@ function App() {
         </Route> 
 
         <Route exact path="/library">
-         <Library cards={cards} />
+         <Library 
+          cards={searchCards} 
+          searchTerm={searchTerm} 
+          onSetSearchTerm={setSearchTerm}
+        />
         </Route>
 
         <Route exact path="/welcome">
