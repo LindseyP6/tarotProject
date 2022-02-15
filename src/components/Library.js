@@ -8,14 +8,11 @@ function Library({cards}) {
 
 
   const showCards = cards.map(card => (
-    <div>
-      <img alt={card.name}
-      width="7%" key={card.value} src={card.image}/>
       <Link
         to={`/library/{card.value}`}
-      > {card.name}
+      >       <img alt={card.name}
+      width="7%" key={card.value} src={card.image}/>
       </Link>
-    </div>
   ))
 
   const {value} = cards
