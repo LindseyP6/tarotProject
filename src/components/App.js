@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <h2>Enjoy 3 FREE readings + 70% off your first session!</h2>
+      {/* <h2>Enjoy 3 FREE readings + 70% off your first session!</h2> */}
       <Switch>
         <Route exact path="/readings">
          <CardContainer cards={cards}/>

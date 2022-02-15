@@ -57,7 +57,8 @@ button {
 .cards-list {
   grid-area: bt;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
 }
 
 .logo {

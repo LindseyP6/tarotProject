@@ -20,8 +20,12 @@ function Login() {
         placeholder="question"
       />
       </form>
-      <h2>Logo</h2>
-      <h2>COMING SOON: Enjoy 3 FREE readings + 70% off your first session!</h2>
+
+      <h2>Logo Goes here</h2>
+      <ul>COMING SOON: 
+        <li>Professional readings: Enjoy 3 FREE readings + 70% off your first session!</li>
+        <li>Message board: Connect with other Tarot members</li>
+        </ul>
     </div>
   )
 }

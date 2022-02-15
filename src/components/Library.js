@@ -2,15 +2,20 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
 function Library({cards}) {
-  // const [isLoaded, setIsLoaded] = useState(false)
+  // const [isLoaded, setIsLoaded] = useState(true)
 
   // if (!isLoaded) return <h4>Loading...</h4>;
+
 
   const showCards = cards.map(card => (
       <Link
         to={`/library/{card.value}`}
-      >       <img alt={card.name}
-      width="7%" key={card.value} src={card.image}/>
+      >       
+        <img 
+          alt={card.name}
+          key={card.value} 
+          src={card.image}
+          width="8%" />
       </Link>
   ))
 

@@ -6,7 +6,6 @@ function CardContainer({cards}) {
   const [index, setIndex] = useState(0)
   
   const randomCards = cards.sort(() => Math.random() - 0.5);
-// console.log(randomCards)
 
   const cardsList = randomCards
       .slice(index, index + 5)
