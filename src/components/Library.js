@@ -11,3 +11,5 @@ function Library({cards}) {
 }
 
 export default Library;
+
+//library" will show type, name, meaningUp, meaningRev, desc 

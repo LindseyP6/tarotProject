@@ -11,6 +11,7 @@ function Login() {
         name="name"
         placeholder="enter your name"
       />
+      <br></br>
       <input 
         type="text"
         name="question"

@@ -12,6 +12,7 @@ function CardContainer({cards}) {
         key={card.value} 
         name={card.name}
         image={card.image}
+        meaningUp={card.meaningUp}
         />
       ))
 
