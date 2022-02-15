@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch,} from "react-router-dom";
 import CardContainer from './CardContainer';
 import Library from './Library';
 import NavBar from './NavBar';
@@ -9,7 +9,7 @@ import '../App.css';
 
 function App() {
   const [cards, setCards] = useState([])
-  
+
   useEffect(()=>{
     fetch("http://localhost:3000/cards")
     .then(r=>r.json())
@@ -25,9 +25,10 @@ function App() {
          <CardContainer cards={cards}/>
         </Route>
 
-        <Route exact path="/library/:id">
+        <Route path={`/library/{cards.value}`}>
           <LibraryDetail />
         </Route> 
+
         <Route exact path="/library">
          <Library cards={cards} />
         </Route>

@@ -1,40 +1,28 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Link, Route, useParams} from 'react-router-dom';
 
 function Library({cards}) {
-  // const [isLoaded, setIsLoaded] = useState(true)
 
-  // if (!isLoaded) return <h4>Loading...</h4>;
-
-
+  
   const showCards = cards.map(card => (
-      <Link
+      <Link key={card.key}
         to={`/library/{card.value}`}
       >       
         <img 
           alt={card.name}
           key={card.value} 
           src={card.image}
+          name={card.name}
           width="8%" />
       </Link>
-  ))
-
-  const {value} = cards
+  )) 
 
   return (
     <div>
-      {showCards}
+{showCards}
 
     </div>
   )
 }
 
 export default Library;
-
-//library" will show type, name, meaningUp, meaningRev, desc 
-//          <Link
-// className="button"
-// to={`/projects/${id}/edit`}
-// >
-// <FaPencilAlt />
-// </Link>
