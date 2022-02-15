@@ -14,26 +14,19 @@ function App() {
     .then(setCards)
   }, [])
 
-  const showCards = cards.map(card => (
-    <img alt={card.name}
-    width="7%" key={card.value} src={card.image}/>
-  ))
-
-
   return (
     <div>
       <NavBar />
       <h2><i>Enjoy 3 FREE readings + 70% off your first session!</i></h2>
-      <img src="https://media.istockphoto.com/vectors/beauty-lotus-logo-vector-design-illustration-vector-id1224093652?k=20&m=1224093652&s=170667a&w=0&h=Jqhwgn3piTenNuqwvtMkeJH6qlp1tfTjPjmUOKFH1hE="/>
+      <img src="https://media.istockphoto.com/vectors/beauty-lotus-logo-vector-design-illustration-vector-id1224093652?k=20&m=1224093652&s=170667a&w=0&h=Jqhwgn3piTenNuqwvtMkeJH6qlp1tfTjPjmUOKFH1hE=" alt="lotus"/>
       <Switch>
         <Route path="/readings">
          <CardContainer cards={cards}/>
         </Route>
         <Route path="/library">
-         <Library showCards={showCards} />
+         <Library cards={cards} />
         </Route>
         <Route path="/">
-          {/* Form */}
         </Route>
        </Switch>
        
