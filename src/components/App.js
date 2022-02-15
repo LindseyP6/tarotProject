@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import CardContainer from './CardContainer';
 import Library from './Library';
 import NavBar from './NavBar';
+import Login from './Login';
 import '../App.css';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <h2><i>Enjoy 3 FREE readings + 70% off your first session!</i></h2>
+      <h2>Enjoy 3 FREE readings + 70% off your first session!</h2>
       <Switch>
         <Route exact path="/readings">
          <CardContainer cards={cards}/>
@@ -25,6 +26,11 @@ function App() {
         <Route exact path="/library">
          <Library cards={cards} />
         </Route>
+
+        <Route exact path="/welcome">
+         <Login />
+        </Route>
+
         <Route path="/">
         </Route>
        </Switch>

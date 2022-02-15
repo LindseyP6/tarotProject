@@ -1,7 +1,7 @@
 * {
   margin: auto;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Cinzel', serif;
   text-align: center;
 }
 
@@ -12,7 +12,9 @@ body {
 
 h2 {
   margin-top:15px;
-  color:#30e430;
+  color:#31cb31;
+  font-weight: bolder;
+  font-size: 26px;
 }
 
 button {
@@ -51,17 +53,15 @@ button {
 
 .logo {
   position: absolute;
-  left: 10px;
-  top: 10px;
   border-radius:5px;
-    top: 40%;
-    left: 38%;
-    width: 75px;
-    height: 75px;
+    top: 55px;
+    left: 80px;
+    width: 70px;
+    height: 70px;
     margin:-60px 0 0 -60px;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 13s linear infinite;
+    /* -webkit-animation:spin 5s linear infinite;
+    -moz-animation:spin 5s linear infinite;
+    animation:spin 14s linear infinite; */
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
