@@ -10,15 +10,20 @@ body {
   color:white;
 }
 
+h2 {
+  margin-top:5%;
+  color:#30e430;
+}
+
 /* .reading-cards img{
 
 } */
 #nav {
-  background-color: rgb(182, 42, 140);
+  background-color: rgb(153, 42, 120);
   background-image:url("https://images.unsplash.com/photo-1618108571494-7065bc619e68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80");
   background-blend-mode: screen;
   height: 20px;
-  width: 98%; 
+  width: 99%; 
 }
 
 .nav-li {
@@ -28,12 +33,14 @@ body {
   padding: 1px;
   color:white;
   text-indent: 10px;
-  
-
 }
 
 .cards-list {
   grid-area: bt;
   display: flex;
   justify-content: space-evenly;
+}
+
+img {
+  margin-top:70px;
 }
