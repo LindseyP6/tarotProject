@@ -18,12 +18,11 @@ function App() {
     <div>
       <NavBar />
       <h2><i>Enjoy 3 FREE readings + 70% off your first session!</i></h2>
-      <img className="logo" src="https://media.istockphoto.com/vectors/beauty-lotus-logo-vector-design-illustration-vector-id1224093652?k=20&m=1224093652&s=170667a&w=0&h=Jqhwgn3piTenNuqwvtMkeJH6qlp1tfTjPjmUOKFH1hE=" alt="lotus"/>
       <Switch>
-        <Route path="/readings">
+        <Route exact path="/readings">
          <CardContainer cards={cards}/>
         </Route>
-        <Route path="/library">
+        <Route exact path="/library">
          <Library cards={cards} />
         </Route>
         <Route path="/">
