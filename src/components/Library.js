@@ -6,7 +6,6 @@ function Library({cards}) {
 
   // if (!isLoaded) return <h4>Loading...</h4>;
 
-
   const showCards = cards.map(card => (
       <Link
         to={`/library/{card.value}`}

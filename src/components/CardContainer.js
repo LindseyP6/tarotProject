@@ -5,7 +5,10 @@ import Cards from './Cards';
 function CardContainer({cards}) {
   const [index, setIndex] = useState(0)
   
-  const cardsList = cards
+  const randomCards = cards.sort(() => Math.random() - 0.5);
+// console.log(randomCards)
+
+  const cardsList = randomCards
       .slice(index, index + 5)
       .map(card => (
         <Cards 
