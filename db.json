@@ -757,24 +757,6 @@
       "meaningUp": "Whatsoever is intimated by the design; also pain, affliction, tears, sadness, desolation. It is not especially a card of violent death.",
       "meaningRev": "Advantage, profit, success, favour, but none of these are permanent; also power and authority.",
       "desc": "A prostrate figure, pierced by all the swords belonging to the card."
-    },
-    {
-      "name": "",
-      "image": "",
-      "meaningUp": "",
-      "id": 79
-    },
-    {
-      "name": "",
-      "image": "",
-      "meaningUp": "",
-      "id": 80
-    },
-    {
-      "name": "Mx.Sushi",
-      "image": "https://i5.walmartimages.com/asr/6b82fcc8-60b8-42f0-8def-5be120f448b6_1.c1a7f678403be2de3c58556c80b96b43.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
-      "meaningUp": "E",
-      "id": 81
-    }
+    } 
   ]
 }

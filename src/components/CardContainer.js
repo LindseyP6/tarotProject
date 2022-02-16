@@ -9,14 +9,29 @@ function CardContainer({cards}) {
 
   const cardsList = randomCards
       .slice(index, index + 5)
-      .map(card => (
-        <Cards 
-        key={card.id} 
-        name={card.name}
-        image={card.image}
-        meaningUp={card.meaningUp}
-        />
-      ))
+      .map(card => {
+        // random logic that returns 1 or 0
+        let random = Math.floor(Math.random() * 2);
+
+        if (random) {
+          <Cards 
+          key={card.id} 
+          name={card.name}
+          image={card.image}
+          meaningUp={card.meaningUp}
+          />
+        }else{
+          <Cards 
+          key={card.id} 
+          name={card.name}
+          image={card.image}
+          meaningRev={card.meaningRev}
+          flip={true}
+          />
+        }
+       
+      }
+    )
 
   function handleAddCards(){
     setIndex(index => (index + 3) % cards.length)

@@ -11,7 +11,6 @@ function App() {
   const [cards, setCards] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
   
-
   useEffect(()=>{
     fetch("http://localhost:3000/cards")
     .then(r=>r.json())
@@ -36,8 +35,8 @@ function App() {
          <CardContainer cards={searchCards}/>
         </Route>
 
-        <Route path="/library/:name">
-          <LibraryDetail cards={searchCards}/>
+        <Route path="/library/:id">
+          <LibraryDetail />
         </Route> 
 
         <Route exact path="/library">
