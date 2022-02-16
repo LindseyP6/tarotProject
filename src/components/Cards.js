@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function Cards({name, image, meaningUp}) {
+function Cards({flip, name, image, meaningUp, meaningRev}) {
   const [toggle, setToggle] = useState(false)
 
   function handleToggleDetails() {
@@ -15,12 +15,13 @@ function Cards({name, image, meaningUp}) {
       >
       <h4>{name} </h4>
       <img
+        // className={flip ? 'flip' : null}
         src={image}
         alt={name}
         width="70%"
       />
       {toggle ? <p>{meaningUp}</p> : null}
-
+      {/* {toggle ? <p>{meaningRev}</p> : null} */}
     </div>
   )
 }
