@@ -8,18 +8,6 @@ function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
   // if (!cards) return <h2>Loading...</h2>
   
   const showCards = cards.map(card => (
-<<<<<<< HEAD
-      <Link key={card.name}
-        to={`/library/:value`}
-      >       
-        <img 
-          alt={card.name}
-          key={card.value} 
-          src={card.image}
-          name={card.name}
-          width="8%" />
-      </Link>
-=======
     <Link to key={card.id}
      to={`/library/${card.id}`}>  
       <img 
@@ -29,7 +17,6 @@ function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
         alt={card.name}
         width="8%" />
     </Link>
->>>>>>> working
   )) 
 
   function handleClick() {

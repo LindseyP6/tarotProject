@@ -1,15 +1,52 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Login() {
+  const [formData, setFormData] = useState({
+    name: "",
+    question: "",
+    email: "",
+  });
+
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const newUser = {
+        name: formData.name,
+        question: formData.question,
+        email : formData.email,
+      };
+
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      // .then((r) => r.json())
+      // .then((newCard) => onAddCard(newCard));
+      setFormData({name:"", question:"", email:""})
+      console.log(newUser)
+  }
+
   return (
     <div>
       <h1>Welcome!</h1>
       
-      <form className="form">
+      <form onSubmit={handleSubmit} className="form">
         <h4>To begin, enter your name below.</h4>
         <input 
         type="text"
         name="name"
+        value={formData.name}
+        onChange={handleChange}
         placeholder="enter your name"
       />
       <br></br>
@@ -17,7 +54,24 @@ function Login() {
       <input 
         type="text"
         name="question"
+        value={formData.question}
+        onChange={handleChange}
         placeholder="question"
+      /> 
+      <br></br>
+      <input 
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="email"
+      />
+      <br></br>
+      <input
+        type="submit"
+        name="submit"
+        value="Join!"
+        className="submit"
       />
       </form>
 
