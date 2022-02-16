@@ -43,12 +43,10 @@ function App() {
         />
         </Route>
 
-        <Route exact path="/welcome">
+        <Route exact path="/">
          <Login />
         </Route>
 
-        <Route path="/">
-        </Route>
        </Switch>
        
     </div>
