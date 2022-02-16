@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useHistory } from "react-router-dom";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -6,7 +7,8 @@ function Login() {
     question: "",
     email: "",
   });
-
+  const history = useHistory();
+  
   function handleChange(event) {
     setFormData({
       ...formData,
@@ -34,6 +36,7 @@ function Login() {
       // .then((newCard) => onAddCard(newCard));
       setFormData({name:"", question:"", email:""})
       console.log(newUser)
+      history.push("/readings");
   }
 
   return (
