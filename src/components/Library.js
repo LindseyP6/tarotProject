@@ -1,21 +1,22 @@
-import React, {useState, useEffect} from 'react';
-import {Link, Route, useParams} from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Library({cards, searchTerm, onSetSearchTerm}) {
-
+  
+  if (!cards) return <h2>Loading...</h2>
   
   const showCards = cards.map(card => (
-      <Link key={card.key}
-        to={`/library/{card.value}`}
-      >       
-        <img 
-          alt={card.name}
-          key={card.value} 
-          src={card.image}
-          name={card.name}
-          width="8%" />
-      </Link>
+    <Link to key={card.value}
+     to={`/library/${card.name}`}>  
+      <img 
+        key={card.value}
+        src={card.image}
+        name={card.name}
+        alt={card.name}
+        width="8%" />
+    </Link>
   )) 
+
 
   return (
     <div>
@@ -29,8 +30,7 @@ function Library({cards, searchTerm, onSetSearchTerm}) {
         onChange={(e) => onSetSearchTerm(e.target.value)}
       />
     </div>
-{showCards}
-
+      {showCards}
     </div>
   )
 }

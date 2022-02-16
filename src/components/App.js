@@ -22,6 +22,7 @@ function App() {
     return card.name && card.desc && card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
+  
   return (
     <div>
       <NavBar />
@@ -31,8 +32,8 @@ function App() {
          <CardContainer cards={cards}/>
         </Route>
 
-        <Route path={`/library/{cards.value}`}>
-          <LibraryDetail />
+        <Route path="/library/:name">
+          <LibraryDetail cards={cards} />
         </Route> 
 
         <Route exact path="/library">
@@ -45,6 +46,10 @@ function App() {
 
         <Route exact path="/">
          <Login />
+        </Route>
+
+        <Route path="*">
+          <h1>404 not found</h1>
         </Route>
 
        </Switch>
