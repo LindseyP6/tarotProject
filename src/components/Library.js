@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
+import CardForm from "./CardForm"
 
-function Library({cards, searchTerm, onSetSearchTerm}) {
-  
+function Library({cards, searchTerm, onSetSearchTerm,onAddCard}) {
+  const [showForm, setShowForm] = useState(false);
+
   if (!cards) return <h2>Loading...</h2>
   
   const showCards = cards.map(card => (
@@ -17,6 +19,9 @@ function Library({cards, searchTerm, onSetSearchTerm}) {
     </Link>
   )) 
 
+  function handleClick() {
+    setShowForm((showForm) => !showForm);
+  }
 
   return (
     <div>
@@ -24,11 +29,14 @@ function Library({cards, searchTerm, onSetSearchTerm}) {
         <label htmlFor="search">Search Cards:</label>
       <input
         type="text"
-        id="search"
         placeholder="Type a name to search..."
         value={searchTerm}
         onChange={(e) => onSetSearchTerm(e.target.value)}
       />
+      <div className="buttonContainer">
+        <button onClick={handleClick}>Add a Tarot Card</button>
+      </div>
+      {showForm ? <CardForm onAddCard={onAddCard}/> : null}
     </div>
       {showCards}
     </div>

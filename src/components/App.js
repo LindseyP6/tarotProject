@@ -19,8 +19,13 @@ function App() {
   }, [])
 
   const searchCards = cards.filter((card) => {
-    return card.name && card.desc && card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
+    return card.name.toLowerCase().includes(searchTerm.toLowerCase())
+    || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
   });
+
+    function handleAddCard(newCard) {
+    setCards([...cards, newCard]);
+  }
 
   
   return (
@@ -29,11 +34,11 @@ function App() {
       {/* <h2>Enjoy 3 FREE readings + 70% off your first session!</h2> */}
       <Switch>
         <Route exact path="/readings">
-         <CardContainer cards={cards}/>
+         <CardContainer cards={searchCards}/>
         </Route>
 
         <Route path="/library/:name">
-          <LibraryDetail cards={cards}/>
+          <LibraryDetail cards={searchCards}/>
         </Route> 
 
         <Route exact path="/library">
@@ -41,6 +46,7 @@ function App() {
           cards={searchCards} 
           searchTerm={searchTerm} 
           onSetSearchTerm={setSearchTerm}
+          onAddCard={handleAddCard}
         />
         </Route>
 
