@@ -58,7 +58,12 @@ button {
   grid-area: bt;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly; 
+  flex-flow: space-between;
+}
+
+.reading-cards {
+  flex-grow: 12;
 }
 
 .logo {

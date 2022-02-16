@@ -5,8 +5,8 @@ function Library({cards, searchTerm, onSetSearchTerm}) {
 
   
   const showCards = cards.map(card => (
-      <Link key={card.key}
-        to={`/library/{card.value}`}
+      <Link key={card.name}
+        to={`/library/:value`}
       >       
         <img 
           alt={card.name}

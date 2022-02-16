@@ -19,8 +19,13 @@ function App() {
   }, [])
 
   const searchCards = cards.filter((card) => {
-    return card.name && card.desc && card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
+    return card.name.toLowerCase().includes(searchTerm.toLowerCase())
+    || card.desc.toLowerCase().includes(searchTerm.toLowerCase())
+    || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase())
+    || card.type.toLowerCase().includes(searchTerm.toLowerCase());
   });
+
+
 
   return (
     <div>
@@ -31,7 +36,7 @@ function App() {
          <CardContainer cards={cards}/>
         </Route>
 
-        <Route path={`/library/{cards.value}`}>
+        <Route exact path="/library/:value">
           <LibraryDetail />
         </Route> 
 
