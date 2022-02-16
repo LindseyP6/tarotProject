@@ -19,21 +19,12 @@ function App() {
 
   const searchCards = cards.filter((card) => {
     return card.name.toLowerCase().includes(searchTerm.toLowerCase())
-<<<<<<< HEAD
-    || card.desc.toLowerCase().includes(searchTerm.toLowerCase())
-    || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase())
-    || card.type.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
-
-=======
     || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   function handleAddCard(newCard) {
     setCards([...searchCards, newCard]);
   }
->>>>>>> working
 
   return (
     <div>
@@ -44,11 +35,7 @@ function App() {
          <CardContainer cards={searchCards}/>
         </Route>
 
-<<<<<<< HEAD
-        <Route exact path="/library/:value">
-=======
         <Route path="/library/:id">
->>>>>>> working
           <LibraryDetail />
         </Route> 
 
