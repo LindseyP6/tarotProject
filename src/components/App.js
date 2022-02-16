@@ -11,7 +11,6 @@ function App() {
   const [cards, setCards] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
   
-
   useEffect(()=>{
     fetch("http://localhost:3000/cards")
     .then(r=>r.json())
@@ -19,8 +18,13 @@ function App() {
   }, [])
 
   const searchCards = cards.filter((card) => {
-    return card.name && card.desc && card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
+    return card.name.toLowerCase().includes(searchTerm.toLowerCase())
+    || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
   });
+
+  function handleAddCard(newCard) {
+    setCards([...searchCards, newCard]);
+  }
 
   return (
     <div>
@@ -28,27 +32,30 @@ function App() {
       {/* <h2>Enjoy 3 FREE readings + 70% off your first session!</h2> */}
       <Switch>
         <Route exact path="/readings">
-         <CardContainer cards={cards}/>
+         <CardContainer cards={searchCards}/>
         </Route>
 
-        <Route path={`/library/{cards.value}`}>
+        <Route path="/library/:id">
           <LibraryDetail />
         </Route> 
 
         <Route exact path="/library">
          <Library 
-          cards={searchCards} 
+          cards={cards} 
           searchTerm={searchTerm} 
           onSetSearchTerm={setSearchTerm}
+          onAddCard={handleAddCard}
         />
         </Route>
 
-        <Route exact path="/welcome">
+        <Route exact path="/">
          <Login />
         </Route>
 
-        <Route path="/">
+        <Route path="*">
+          <h1>404 not found</h1>
         </Route>
+
        </Switch>
        
     </div>
