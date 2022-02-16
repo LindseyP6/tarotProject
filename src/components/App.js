@@ -41,7 +41,7 @@ function App() {
 
         <Route exact path="/library">
          <Library 
-          cards={cards} 
+          cards={searchCards} 
           searchTerm={searchTerm} 
           onSetSearchTerm={setSearchTerm}
           onAddCard={handleAddCard}

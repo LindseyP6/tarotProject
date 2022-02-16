@@ -15,13 +15,13 @@ function Cards({flip, name, image, meaningUp, meaningRev}) {
       >
       <h4>{name} </h4>
       <img
-        className={flip ? 'flip' : null}
+        // className={flip ? 'flip' : null}
         src={image}
         alt={name}
         width="70%"
       />
       {toggle ? <p>{meaningUp}</p> : null}
-      {toggle ? <p>{meaningRev}</p> : null}
+      {/* {toggle ? <p>{meaningRev}</p> : null} */}
     </div>
   )
 }

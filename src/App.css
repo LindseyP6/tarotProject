@@ -83,8 +83,7 @@ button {
   flex-wrap: wrap;
 }
 
-.flip {
-  /* this css turns a card upsidown */
+/* .flip {
+  this css turns a card upsidown
   transform: rotate(180deg);
-
-}
+} */
