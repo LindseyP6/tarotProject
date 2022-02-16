@@ -26,9 +26,23 @@ function LibraryDetail() {
   // </div>
 
   return (
-    <div>
+    <div className="libraryCard">
       <img src={`../${card.image}`} alt={card.name}/>
+
+      <div className="libraryDescription">
+      <h4>Name:</h4>
+      <p>{card.name}</p>
+        <hr/>
+      <h4>Type:</h4>
+      <p>{card.type}</p>
+        <hr/>
+      <h4>Meaning Up:</h4>
+      <p>{card.meaningUp}</p>
+        <hr/>
+      <h4>Description:</h4>
       <p>{card.desc}</p>
+
+      </div>
    </div>
   )
 }

@@ -92,3 +92,41 @@ button {
   this css turns a card upsidown
   transform: rotate(180deg);
 } */
+
+.footer {
+  /* padding: 80px 60px; */
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+}
+
+h4 {
+  padding: 3px;
+}
+
+.libraryCard img {
+  float: left;
+  padding-left: 65px;
+  /* padding-top: 20px; */
+}
+
+.libraryCard p {
+  padding-top: 5px;
+  font: "Times New Roman";
+}
+
+.libraryCard {
+  padding-top: 20px
+}
+
+.libraryDescription {
+  width: 500px;
+  padding-left: 400px;
+  padding-top: 50px;
+  /* background-color: yellow; */
+}
+
+hr {
+  border: 1px dotted green
+}

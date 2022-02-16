@@ -42,9 +42,9 @@ function Login() {
   return (
     <div>
       <h1>Welcome!</h1>
-      
-      <form onSubmit={handleSubmit} className="form">
-        <h4>To begin, enter your name below.</h4>
+      <br></br>
+      <form onSubmit={handleSubmit}>
+        <h4>Enter your name below</h4>
         <input 
         type="text"
         name="name"
@@ -53,7 +53,7 @@ function Login() {
         placeholder="enter your name"
       />
       <br></br>
-      <h4>What question would you like answered?</h4>
+      <h4>What is your question?</h4>
       <input 
         type="text"
         name="question"
@@ -62,6 +62,7 @@ function Login() {
         placeholder="question"
       /> 
       <br></br>
+      <h4>Enter your email</h4>
       <input 
         type="email"
         name="email"
@@ -70,19 +71,27 @@ function Login() {
         placeholder="email"
       />
       <br></br>
-      <input
+      <br></br>
+      <button 
         type="submit"
         name="submit"
         value="Join!"
         className="submit"
-      />
-      </form>
+        > <strong>Join!</strong>
+      </button>
+        </form>
+<br></br>
+<br></br>
+<br></br>
+      <img src ="../images/logo.webp" alt="lotuslogo"/>
+      <br></br>
 
-      <h2>Logo Goes here</h2>
-      <ul>COMING SOON: 
-        <li>Professional readings: Enjoy 3 FREE readings + 70% off your first session!</li>
-        <li>Message board: Connect with other Tarot members</li>
-        </ul>
+      <div className="footer">
+      <h3>COMING SOON:</h3>
+        <p style={{color:"#31cb31"}}><strong>Professional readings: Enjoy 3 FREE readings + 70% off your first session!</strong></p>
+        <p>Message board: Connect with other Tarot members</p>
+      </div>
+
     </div>
   )
 }
