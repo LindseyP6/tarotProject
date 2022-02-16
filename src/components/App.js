@@ -33,7 +33,7 @@ function App() {
         </Route>
 
         <Route path="/library/:name">
-          <LibraryDetail cards={cards} />
+          <LibraryDetail cards={cards}/>
         </Route> 
 
         <Route exact path="/library">

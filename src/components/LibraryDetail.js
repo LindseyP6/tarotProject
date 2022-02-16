@@ -7,31 +7,30 @@ function LibraryDetail({cards}) {
   console.log(name)
 
   // useEffect(() => {
-  //     fetch(`http://localhost:3000/cards/${value}`)
+  //     fetch(`http://localhost:3000/cards/${name}`)
   //       .then(r => r.json())
-  //       .then(data => setCard(data.card))
-  // }, [value])
+  //       .then(cards => setCard(cards.card))
+  // }, [name])
   
   // if (!card) return <h2>Loading...</h2>
-  
   
   return (
     <div >
       {cards
-      .filter((card) => card.name===name) 
+      .filter((card) => card.name === name) 
       .map(card => (
       <div key={card.value}>
         <h1>{card.name}</h1>
-        <img 
-          src={card.image}
-          alt={card.name}
-          width="8%" />
+        <img src={card.image} />
         <p>{card.desc}</p>
       </div>
   ))}
    </div>
 )
 }
+
+
+
 
 export default LibraryDetail
 
