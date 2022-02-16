@@ -23,11 +23,10 @@ function App() {
     || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-    function handleAddCard(newCard) {
-    setCards([...cards, newCard]);
+  function handleAddCard(newCard) {
+    setCards([...searchCards, newCard]);
   }
 
-  
   return (
     <div>
       <NavBar />

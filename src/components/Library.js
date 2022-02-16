@@ -2,16 +2,16 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import CardForm from "./CardForm"
 
-function Library({cards, searchTerm, onSetSearchTerm,onAddCard}) {
+function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
   const [showForm, setShowForm] = useState(false);
 
   if (!cards) return <h2>Loading...</h2>
   
   const showCards = cards.map(card => (
-    <Link to key={card.value}
+    <Link to key={card.id}
      to={`/library/${card.name}`}>  
       <img 
-        key={card.value}
+        key={card.id}
         src={card.image}
         name={card.name}
         alt={card.name}

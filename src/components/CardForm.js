@@ -18,8 +18,10 @@ function CardForm({onAddCard}) {
         event.preventDefault();
     
         const newCard = {
-          ...formData,
-        };
+            name: formData.name,
+            image: formData.image,
+            meaningUp : formData.meaningUp,
+          };
     
         fetch("http://localhost:3000/cards", {
           method: "POST",
@@ -29,9 +31,11 @@ function CardForm({onAddCard}) {
           body: JSON.stringify(newCard),
         })
           .then((r) => r.json())
-          .then(onAddCard);
+          .then((newCard) => onAddCard(newCard));
+          setFormData({name:"", image:"", meaningUp:""})
+          console.log(newCard)
       }
-    
+
   return (
     <div className="container">
     <form onSubmit={handleSubmit} className="add-toy-form">

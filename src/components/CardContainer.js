@@ -11,7 +11,7 @@ function CardContainer({cards}) {
       .slice(index, index + 5)
       .map(card => (
         <Cards 
-        key={card.value} 
+        key={card.id} 
         name={card.name}
         image={card.image}
         meaningUp={card.meaningUp}
