@@ -81,7 +81,9 @@ function Login() {
 <br></br>
 <br></br>
 <br></br>
-      <img src ="../images/logo.webp" alt="lotuslogo"/>
+<br></br>
+
+      <img className="welcomeLogo" src ="../images/logo.webp" alt="lotuslogo"/>
       <br></br>
 
       <div className="footer">

@@ -19,7 +19,7 @@ function App() {
 
   const searchCards = cards.filter((card) => {
     return card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    || card.meaningUp.toLowerCase().includes(searchTerm.toLowerCase());
+    || card.desc.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   function handleAddCard(newCard) {

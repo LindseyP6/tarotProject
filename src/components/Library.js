@@ -27,7 +27,7 @@ function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
         <label htmlFor="search"><strong>Search Cards </strong></label>
       <input
         type="text"
-        placeholder="Type a name to search..."
+        placeholder="type name / description"
         value={searchTerm}
         onChange={(e) => onSetSearchTerm(e.target.value)}
       />
