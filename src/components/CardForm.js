@@ -48,7 +48,7 @@ function CardForm({onAddCard}) {
         name="name"
         onChange={handleChange}
         value={formData.name}
-        placeholder="Enter card name..."
+        placeholder="Enter card name"
         className="input-text"
       />
       <input
@@ -56,7 +56,7 @@ function CardForm({onAddCard}) {
         name="image"
         onChange={handleChange}
         value={formData.image}
-        placeholder="Enter card's image URL..."
+        placeholder="Enter image URL"
         className="input-text"
       />
     <input
@@ -64,7 +64,7 @@ function CardForm({onAddCard}) {
         name="desc"
         onChange={handleChange}
         value={formData.desc}
-        placeholder="Enter card's description..."
+        placeholder="Enter description"
         className="input-text"
       />
       <input
@@ -72,7 +72,7 @@ function CardForm({onAddCard}) {
         name="meaningUp"
         onChange={handleChange}
         value={formData.meaningUp}
-        placeholder="Enter card's meaningUp..."
+        placeholder="Enter meaning Up"
         className="input-text"
       />
       <input
@@ -80,7 +80,7 @@ function CardForm({onAddCard}) {
         name="meaningRev"
         onChange={handleChange}
         value={formData.meaningRev}
-        placeholder="Enter card's meaningRev..."
+        placeholder="Enter meaning Reversed"
         className="input-text"
       />
       <input 
