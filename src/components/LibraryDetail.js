@@ -25,7 +25,7 @@ function LibraryDetail() {
       <h4>Name:</h4>
       <p>{card.name}</p>
         <hr/>
-      <h4>Type:</h4>
+      <h4>Arcana Type:</h4>
       <p>{card.type}</p>
         <hr/>
       <h4>Meaning Up:</h4>

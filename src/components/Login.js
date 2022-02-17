@@ -51,6 +51,15 @@ function Login() {
         placeholder="enter your name"
       />
       <br></br>
+      <h4>Enter your email</h4>
+      <input 
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="email"
+        />
+      <br></br>
       <h4>What is your question?</h4>
       <input 
         type="text"
@@ -59,15 +68,6 @@ function Login() {
         onChange={handleChange}
         placeholder="question"
       /> 
-      <br></br>
-      <h4>Enter your email</h4>
-      <input 
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="email"
-      />
       <br></br>
       <br></br>
       <button 

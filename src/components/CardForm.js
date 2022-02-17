@@ -4,7 +4,9 @@ function CardForm({onAddCard}) {
   const [formData, setFormData] = useState({
       name: "",
       image: "",
+      desc: "",
       meaningUp: "",
+      meaningRev: "",
     });
 
   function handleChange(event) {
@@ -20,7 +22,9 @@ function CardForm({onAddCard}) {
     const newCard = {
         name: formData.name,
         image: formData.image,
+        desc : formData.desc,
         meaningUp : formData.meaningUp,
+        meaningRev : formData.meaningRev,
       };
 
     fetch("http://localhost:3000/cards", {
@@ -32,7 +36,7 @@ function CardForm({onAddCard}) {
     })
       .then((r) => r.json())
       .then((newCard) => onAddCard(newCard));
-      setFormData({name:"", image:"", meaningUp:""})
+      setFormData({name:"", image:"", desc:"", meaningUp:"", meaningRev:"" })
       console.log(newCard)
   }
 
@@ -44,7 +48,7 @@ function CardForm({onAddCard}) {
         name="name"
         onChange={handleChange}
         value={formData.name}
-        placeholder="Enter a card name..."
+        placeholder="Enter card name..."
         className="input-text"
       />
       <input
@@ -52,15 +56,31 @@ function CardForm({onAddCard}) {
         name="image"
         onChange={handleChange}
         value={formData.image}
-        placeholder="Enter a card's image URL..."
+        placeholder="Enter card's image URL..."
         className="input-text"
       />
     <input
         type="text"
+        name="desc"
+        onChange={handleChange}
+        value={formData.desc}
+        placeholder="Enter card's description..."
+        className="input-text"
+      />
+      <input
+        type="text"
         name="meaningUp"
         onChange={handleChange}
         value={formData.meaningUp}
-        placeholder="Enter a card's meaningUp..."
+        placeholder="Enter card's meaningUp..."
+        className="input-text"
+      />
+      <input
+        type="text"
+        name="meaningRev"
+        onChange={handleChange}
+        value={formData.meaningRev}
+        placeholder="Enter card's meaningRev..."
         className="input-text"
       />
       <input 

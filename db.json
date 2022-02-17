@@ -765,24 +765,6 @@
       "name": "John Doe",
       "question": "Why is my name john doe?",
       "email": "j.doe@doe.com"
-    },
-    {
-      "name": "",
-      "question": "",
-      "email": "",
-      "id": 2
-    },
-    {
-      "name": "Lindsey",
-      "question": "Will I win life?",
-      "email": "lindsey.pregent@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "Lindsey",
-      "question": "is my project awesome?",
-      "email": "lindsey.pregent@gmail.com",
-      "id": 4
     }
   ]
 }
