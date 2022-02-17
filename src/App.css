@@ -75,7 +75,14 @@ padding-top: 10px;
   flex-basis: auto;
 }
 
-
+.logo2{
+  position: absolute;
+  border-radius:5px;
+    top: 0px;
+    right: 120px;
+    width: 80px;
+    height: 80px;
+}
 .logo {
   position: absolute;
   border-radius:5px;
