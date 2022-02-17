@@ -757,14 +757,6 @@
       "meaningUp": "Whatsoever is intimated by the design; also pain, affliction, tears, sadness, desolation. It is not especially a card of violent death.",
       "meaningRev": "Advantage, profit, success, favour, but none of these are permanent; also power and authority.",
       "desc": "A prostrate figure, pierced by all the swords belonging to the card."
-    },
-    {
-      "name": "Cats",
-      "image": "./images/swords10.jpg",
-      "desc": "love and affection",
-      "meaningUp": "meow",
-      "meaningRev": "hiss",
-      "id": 79
     }
   ],
   "users": [
@@ -773,6 +765,12 @@
       "name": "John Doe",
       "question": "Why is my name john doe?",
       "email": "j.doe@doe.com"
+    },
+    {
+      "name": "Lindsey",
+      "question": "is my project awesome?",
+      "email": "lindsey.pregent@gmail.com",
+      "id": 2
     }
   ]
 }
