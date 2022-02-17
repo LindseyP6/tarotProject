@@ -4,8 +4,6 @@ import CardForm from "./CardForm"
 
 function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
   const [showForm, setShowForm] = useState(false);
-
-  // if (!cards) return <h2>Loading...</h2>
   
   const showCards = cards.map(card => (
     <Link to key={card.id}
@@ -24,7 +22,7 @@ function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
   }
 
   return (
-    <div class="searchAdd">
+    <div className="searchAdd">
       <div className="searchbar">
         <label htmlFor="search"><strong>Search Cards </strong></label>
       <input

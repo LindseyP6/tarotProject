@@ -35,7 +35,7 @@ function App() {
          <CardContainer cards={searchCards}/>
         </Route>
 
-        <Route path="/library/:id">
+        <Route exact path="/library/:id">
           <LibraryDetail />
         </Route> 
 

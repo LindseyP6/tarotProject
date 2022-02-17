@@ -6,7 +6,7 @@
 }
 
 body {
-  background: rgb(63, 30, 53);
+  background: rgb(72, 34, 61);
   color:white;
 }
 
@@ -26,6 +26,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
+  font-weight: bold;
 }
 
 #nav {
@@ -55,16 +56,25 @@ button {
 }
 
 .cards-list {
-  grid-area: bt;
+  /* grid-area: bt;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly; 
-  flex-flow: space-between;
+  justify-content: space-evenly;
+  flex-flow: space-between; */
+
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+padding-top: 10px;
 }
 
 .reading-cards {
-  flex-grow: 12;
+  flex-shrink: auto;
+  flex-basis: auto;
 }
+
 
 .logo {
   position: absolute;
@@ -94,7 +104,6 @@ button {
 } */
 
 .footer {
-  /* padding: 80px 60px; */
   position: absolute;
   text-align: center;
   bottom: 0px;
@@ -107,8 +116,8 @@ h4 {
 
 .libraryCard img {
   float: left;
-  padding-left: 65px;
-  /* padding-top: 20px; */
+  padding-left: 75px;
+  padding-top: 10px;
 }
 
 .libraryCard p {
@@ -117,13 +126,13 @@ h4 {
 }
 
 .libraryCard {
-  padding-top: 20px
+  padding-top: 15px
 }
 
 .libraryDescription {
   width: 500px;
   padding-left: 400px;
-  padding-top: 50px;
+  padding-top: 40px;
   /* background-color: yellow; */
 }
 

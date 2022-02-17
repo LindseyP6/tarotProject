@@ -1,33 +1,25 @@
 import React, {useState, useEffect} from 'react'
-import {useParams} from 'react-router-dom';
+import {useParams, Link, useHistory} from 'react-router-dom';
 
 function LibraryDetail() {
   const [card, setCard] = useState([]);
   const {id} = useParams()
-  console.log(id)
-
+  
   useEffect(() => {
-      fetch(`http://localhost:3000/cards/${id}`)
+    fetch(`http://localhost:3000/cards/${id}`)
         .then(r => r.json())
         .then(card =>setCard(card));
-  }, [id])
-
-  console.log(card)
-  
-  if (!card) return <h2>Loading...</h2>
-
-// const oneCard = cards
-  // .filter((card) => card.name === name)
-  // .map(card => (
-  // <div key={card.id}>
-  //   <h1>{card.name}</h1>
-  //   <img src={card.image} alt={card.name}/>
-  //   <p>{card.desc}</p>
-  // </div>
+      }, [id])
+// if (!card) return <h2>Loading...</h2>
 
   return (
     <div className="libraryCard">
       <img src={`../${card.image}`} alt={card.name}/>
+
+      <Link to={`/library/${card.id - 1}`}>
+        <button style={{"marginRight": "10px"}}>Prior Card    </button>
+        </Link> 
+      <Link to={`/library/${card.id + 1}`}><button>Next Card</button></Link> 
 
       <div className="libraryDescription">
       <h4>Name:</h4>
@@ -41,8 +33,8 @@ function LibraryDetail() {
         <hr/>
       <h4>Description:</h4>
       <p>{card.desc}</p>
-
       </div>
+
    </div>
   )
 }

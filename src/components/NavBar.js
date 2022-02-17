@@ -9,7 +9,7 @@ function NavBar() {
       <NavLink className="nav-li" exact to="/readings">Readings</NavLink>
       <NavLink className="nav-li" exact to="/library">Library</NavLink>
       <NavLink className="nav-li" exact to="/">Welcome</NavLink>  
-      <img className="logo" src="https://media.istockphoto.com/vectors/beauty-lotus-logo-vector-design-illustration-vector-id1224093652?k=20&m=1224093652&s=170667a&w=0&h=Jqhwgn3piTenNuqwvtMkeJH6qlp1tfTjPjmUOKFH1hE=" alt="lotus"/>
+      <img className="logo" src="https://media.istockphoto.com/vectors/beauty-lotus-logo-vector-design-illustration-vector-id1224093652?k=20&m=1224093652&s=170667a&w=0&h=Jqhwgn3piTenNuqwvtMkeJH6qlp1tfTjPjmUOKFH1hE=" alt="lotus logo"/>
     </div>
   </div>
   )

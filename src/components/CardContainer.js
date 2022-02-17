@@ -5,8 +5,7 @@ import Cards from './Cards';
 function CardContainer({cards}) {
   const [index, setIndex] = useState(0)
   
-  const randomCards = cards.sort(() => Math.random() - 0.5);
-
+  const randomCards = cards.sort(() => Math.random() - .5);
   const cardsList = randomCards
       .slice(index, index + 5)
       .map(card => (
@@ -23,9 +22,9 @@ function CardContainer({cards}) {
   }
 
   return (
-    <div className="cards-list">
-       {cardsList}
+    <div>
        <MoreButton onClickMore = {handleAddCards}/>
+       <div className="cards-list">{cardsList}</div>
       </div>
   )
 }
