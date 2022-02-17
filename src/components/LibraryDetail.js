@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {useParams, Link, useHistory} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 
 function LibraryDetail() {
   const [card, setCard] = useState([]);
@@ -10,7 +10,7 @@ function LibraryDetail() {
         .then(r => r.json())
         .then(card =>setCard(card));
       }, [id])
-// if (!card) return <h2>Loading...</h2>
+  if (!card) return <h2>Loading...</h2> 
 
   return (
     <div className="libraryCard">
@@ -30,6 +30,9 @@ function LibraryDetail() {
         <hr/>
       <h4>Meaning Up:</h4>
       <p>{card.meaningUp}</p>
+        <hr/>
+      <h4>Meaning Reversed:</h4>
+      <p>{card.meaningRev}</p>
         <hr/>
       <h4>Description:</h4>
       <p>{card.desc}</p>

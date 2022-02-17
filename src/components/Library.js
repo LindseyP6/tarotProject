@@ -31,7 +31,7 @@ function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
         value={searchTerm}
         onChange={(e) => onSetSearchTerm(e.target.value)}
       />
-      <button style={{height:"28px", padding:"-10px", margin:"2px"}}onClick={handleClick}><strong>Add a Tarot Card</strong></button>
+      <button style={{height:"28px", padding:"-10px", margin:"2px"}}onClick={handleClick}><strong>Add Your Own Tarot Card</strong></button>
       </div>
       {showForm ? <CardForm onAddCard={onAddCard}/> : null}
       {showCards}

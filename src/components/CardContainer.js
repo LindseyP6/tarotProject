@@ -8,13 +8,28 @@ function CardContainer({cards}) {
   const randomCards = cards.sort(() => Math.random() - .5);
   const cardsList = randomCards
       .slice(index, index + 5)
-      .map(card => (
-        <Cards 
-        key={card.id} 
-        name={card.name}
-        image={card.image}
-        meaningUp={card.meaningUp}
-        />)
+      .map(card => { 
+        let random = Math.floor(Math.random() * 2);
+        if (random) {
+          return <Cards 
+          key={card.id} 
+          name={card.name}
+          image={card.image}
+          meaningUp={card.meaningUp}
+          meaningRev={card.meaningRev}
+          flip={false}
+          />
+        }else{
+          return <Cards 
+          key={card.id} 
+          name={card.name}
+          image={card.image}
+          meaningUp={card.meaningUp}
+          meaningRev={card.meaningRev}
+          flip={true}
+          />
+        }
+      }
     )
 
   function handleAddCards(){

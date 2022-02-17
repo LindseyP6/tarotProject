@@ -15,17 +15,20 @@ function Cards({flip, name, image, meaningUp, meaningRev}) {
       >
       <h4>{name} </h4>
       <img
-        // className={flip ? 'flip' : null}
+        className={flip ? 'flip' : null}
         src={image}
         alt={name}
         width="70%"
       />
-      {toggle ? <p>{meaningUp}</p> : null}
-      {/* {toggle ? <p>{meaningRev}</p> : null} */}
+      {toggle ? 
+      <>
+      <p> <strong>Meaning Up: </strong> {meaningUp}</p>
+      <br/>
+      <p><strong>Meaning Reversed: </strong>{meaningRev} </p>
+      </>
+   : null}
     </div>
   )
 }
 
 export default Cards
-
-//on click show:  meaningUp & description

@@ -32,8 +32,6 @@ function Login() {
       },
       body: JSON.stringify(newUser),
     })
-      // .then((r) => r.json())
-      // .then((newCard) => onAddCard(newCard));
       setFormData({name:"", question:"", email:""})
       console.log(newUser)
       history.push("/readings");

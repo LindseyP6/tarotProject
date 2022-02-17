@@ -98,10 +98,10 @@ padding-top: 10px;
   flex-wrap: wrap;
 }
 
-/* .flip {
-  this css turns a card upsidown
+.flip {
+  /* this css turns a card upsidown */
   transform: rotate(180deg);
-} */
+}
 
 .footer {
   position: absolute;
@@ -138,4 +138,9 @@ h4 {
 
 hr {
   border: 1px dotted green
+  rgb(216, 180, 206)
+}
+
+.formcontainer {
+  padding: 8px 8px;
 }
