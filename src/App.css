@@ -164,5 +164,5 @@ hr {
   margin-bottom:30px;
   box-shadow: 12px 12px 102px 1px rgba(136, 0, 255, 0.2);
   transition: 2s ease-in-out;
-  animation: fadeinout 4s linear forwards;
+  /* animation: fadeinout 4s linear forwards; */
 }
