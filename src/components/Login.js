@@ -33,7 +33,6 @@ function Login() {
       body: JSON.stringify(newUser),
     })
       setFormData({name:"", question:"", email:""})
-      console.log(newUser)
       history.push("/readings");
   }
 
@@ -75,7 +74,7 @@ function Login() {
         name="submit"
         value="Join!"
         className="submit"
-        > <strong>Join!</strong>
+        > <strong>Enter!</strong>
       </button>
         </form>
 <br></br>
