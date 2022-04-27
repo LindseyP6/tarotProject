@@ -13,7 +13,7 @@ function Cards({flip, name, image, meaningUp, meaningRev}) {
       className="reading-cards"
       onClick={handleToggleDetails}
       >
-      <h4>{name} </h4>
+      <h3>{name} </h3>
       <img
         className={flip ? 'flip' : null}
         src={image}
@@ -22,9 +22,9 @@ function Cards({flip, name, image, meaningUp, meaningRev}) {
       />
       {toggle ? 
       <>
-      <p> <strong>Meaning Up: </strong> {meaningUp}</p>
+      <h3>Meaning Up: </h3> <p> {meaningUp}</p>
       <br/>
-      <p><strong>Meaning Reversed: </strong>{meaningRev} </p>
+      <h3>Meaning Reversed: </h3><p>{meaningRev} </p>
       </>
    : null}
     </div>

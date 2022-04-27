@@ -37,11 +37,11 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className="welcome">
       <h1>Welcome!</h1>
       <br></br>
       <form onSubmit={handleSubmit}>
-        <h4>Enter your name below</h4>
+        <h3>Enter your name below</h3>
         <input 
         type="text"
         name="name"
@@ -50,7 +50,7 @@ function Login() {
         placeholder="enter your name"
       />
       <br></br>
-      <h4>Enter your email</h4>
+      <h3>Enter your email</h3>
       <input 
         type="email"
         name="email"
@@ -59,7 +59,7 @@ function Login() {
         placeholder="email"
         />
       <br></br>
-      <h4>What is your question?</h4>
+      <h3>What is your question?</h3>
       <input 
         type="text"
         name="question"
@@ -86,7 +86,7 @@ function Login() {
       <br></br>
 
       <div className="footer">
-      <h3>COMING SOON:</h3>
+      <h2>COMING SOON:</h2>
         <p style={{color:"#31cb31"}}><strong>Professional readings: Enjoy 3 FREE readings + 70% off your first session!</strong></p>
         <p>Message board: Connect with other Tarot members</p>
       </div>

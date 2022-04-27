@@ -29,10 +29,14 @@ function Library({cards, searchTerm, onSetSearchTerm, onAddCard}) {
         type="text"
         placeholder="type name / description"
         value={searchTerm}
+        className="input-text"
         onChange={(e) => onSetSearchTerm(e.target.value)}
       />
-      <button style={{height:"28px", padding:"-10px", margin:"2px"}}onClick={handleClick}><strong>Add Your Own Tarot Card</strong></button>
+      <br></br>
       </div>
+      <button 
+        onClick={handleClick}><strong>Add Your Own Tarot Card</strong></button>
+      <br></br>
       {showForm ? <CardForm onAddCard={onAddCard}/> : null}
       {showCards}
     </div>

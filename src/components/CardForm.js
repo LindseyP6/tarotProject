@@ -84,7 +84,7 @@ function CardForm({onAddCard}) {
         className="input-text"
       />
       <input 
-        style={{backgroundColor: "#dfc9de", color:"rgb(72, 34, 61)"}}
+        style={{backgroundColor: "#dfc9de", color:"rgb(72, 34, 61)",fontSize:"20px", height: "36px"}}
         type="submit"
         name="submit"
         value="Add Your Card"

@@ -14,20 +14,38 @@ h2 {
   margin-top:15px;
   color:#31cb31;
   font-weight: bolder;
+  font-size: 46px;
+}
+
+h4 {
+  font-size: 35px;
+  color: #1e811ede;
+}
+
+h3 {
   font-size: 26px;
+  padding: 10px 0 10px 0;
+  color: #1e811ede;
+}
+
+p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
 }
 
 button {
   color: white;
   background-color: #4CAF50; /* Green */
   border: none;
-  padding: 6px 2px;
+  padding: 10px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
   font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
+
 
 #nav {
   background-color: rgb(153, 42, 120);
@@ -124,12 +142,12 @@ h4 {
 .libraryCard img {
   float: left;
   padding-left: 10%;
-  padding-top: 10px;
+  padding-top: 6%;
 }
 
 .libraryCard p {
-  padding-top: 5px;
-  font: "Times New Roman";
+  padding: 8px;
+  /* font: "Times New Roman"; */
 }
 
 .libraryCard {
@@ -165,4 +183,12 @@ hr {
   box-shadow: 12px 12px 102px 1px rgba(136, 0, 255, 0.2);
   transition: 2s ease-in-out;
   /* animation: fadeinout 4s linear forwards; */
+}
+
+.input-text, .welcome input {
+  padding: 8px;
+}
+
+.searchbar {
+  padding-bottom: 15px;
 }

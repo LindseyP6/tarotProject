@@ -759,44 +759,12 @@
       "desc": "A prostrate figure, pierced by all the swords belonging to the card."
     },
     {
-      "name": "Cats",
-      "image": "./images/swords10.jpg",
-      "desc": "love and affection",
-      "meaningUp": "meow",
-      "meaningRev": "hiss",
+      "name": "Doggo",
+      "image": "./images/Thelovers.PNG",
+      "desc": "Two dogs who are best friends",
+      "meaningUp": "Friendship is great",
+      "meaningRev": "Friendship should be cherished",
       "id": 79
-    },
-    {
-      "name": "Doggo",
-      "image": "./images/Thelovers.PNG",
-      "desc": "pupp",
-      "meaningUp": "meow",
-      "meaningRev": "bark bark",
-      "id": 80
-    },
-    {
-      "name": "Doggo",
-      "image": "./images/Thelovers.PNG",
-      "desc": "love and affection",
-      "meaningUp": "meow",
-      "meaningRev": "hiss",
-      "id": 81
-    },
-    {
-      "name": "Doggo",
-      "image": "https://i5.walmartimages.com/asr/6b82fcc8-60b8-42f0-8def-5be120f448b6_1.c1a7f678403be2de3c58556c80b96b43.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
-      "desc": "love and affection",
-      "meaningUp": "meow",
-      "meaningRev": "hiss",
-      "id": 82
-    },
-    {
-      "name": "Doggo",
-      "image": "https://i5.walmartimages.com/asr/6b82fcc8-60b8-42f0-8def-5be120f448b6_1.c1a7f678403be2de3c58556c80b96b43.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
-      "desc": "love and affection",
-      "meaningUp": "meow",
-      "meaningRev": "hiss",
-      "id": 83
     }
   ],
   "users": [
@@ -841,6 +809,78 @@
       "question": "",
       "email": "",
       "id": 7
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is this project awesome?",
+      "email": "l@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 9
+    },
+    {
+      "name": "lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 10
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 11
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 12
+    },
+    {
+      "name": "",
+      "question": "",
+      "email": "l@gmail.com",
+      "id": 13
+    },
+    {
+      "name": "",
+      "question": "Is my project awesome?",
+      "email": "",
+      "id": 14
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 15
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 16
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 17
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 18
+    },
+    {
+      "name": "Lindsey",
+      "question": "Is my project awesome?",
+      "email": "l@gmail.com",
+      "id": 19
     }
   ]
 }
